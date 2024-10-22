@@ -23,7 +23,8 @@ This tutorial ran using Python 3.12.7.
   * Weaviate (depends on Docker)
   * Ollama (for running a local embedding model)
   * Jupyter Lab (for running my Python examples)
-* An OpenAI API (not ChatGPT) account with a funding source. I spent $2 total making this demo.
+* An OpenAI API (not ChatGPT) account with a funding source. I spent $2 in total on this demo.
+   * Set up an environment variable for your OpenAI API key under the name ```OPENAI_API_KEY```
 
 I created the demo on Fedora Linux and installing all of these was very simple. What the world is coming to?
 
