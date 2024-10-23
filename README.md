@@ -13,6 +13,13 @@ This works in the following fashion:
 4. Send a prompt containing the question and the context (search results) to the LLM.
 5. The LLM will return an answer that is relevant to your question.
 
+## Sources
+This tutorial is based on a conglomeration of content from the following sources
+* ChatGPT (Chapters 1 and 2)
+* [Weaviate's documentation](https://weaviate.io/developers/academy/py/starter_text_data/text_rag)
+* Pixegami's [YouTube tutorial](https://www.youtube.com/watch?v=2TJxpyO3ei4&t=202s)
+* [Ollama's blog post about local embedding](https://ollama.com/blog/embedding-models)
+
 ## Making that happen: what do you need?
 This tutorial ran using Python 3.12.7.
 
