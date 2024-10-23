@@ -39,6 +39,7 @@ I created the demo on Fedora Linux and installing all of these was very simple. 
    7. tqdm
    8. openai
    9. langchain
+   10. beautifulsoup4
 3. Install Docker (on Linux, this is as complex as ```sudo dnf install docker``` [for other OSes](https://docs.docker.com/desktop/)
    1. Our setup requires you to use a minimally customized Weaviate Docker container. For that reason you need to be sure Docker Compose is installed.
    2. Installing this on Fedora with ```dnf``` was not working but [installing Compose as a plugin](https://docs.docker.com/compose/install/standalone/) did.
