@@ -25,7 +25,7 @@ This tutorial ran using Python 3.12.7.
 
 * A collection of documents - PDFs are good
 * Install
-  * FAISS - an in-memory vector database from Meta
+  * FAISS - an in-memory vector database from Meta (use faiss-cpu or faiss-gpu based on your hardware)
   * Docker
   * Weaviate (depends on Docker)
   * Ollama (for running a local embedding model)
