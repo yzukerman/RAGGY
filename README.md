@@ -25,7 +25,7 @@ This tutorial ran using Python 3.12.7.
 
 * A collection of documents - PDFs are good
 * Install
-  * FAISS - an in-memory vector database from Meta (use faiss-cpu or faiss-gpu based on your hardware)
+  * FAISS - an in-memory vector database from Meta 
   * Docker
   * Weaviate (depends on Docker)
   * Ollama (for running a local embedding model)
@@ -38,7 +38,7 @@ I created the demo on Fedora Linux and installing all of these was very simple. 
 ## Getting up and running
 1. Use pip to install
    1. jupyter or jupyter-ai
-   2. FAISS
+   2. FAISS - use ```pip install faiss-cpu``` or ```pip install faiss-gpu``` based on your hardware
    3. weaviate-client
    4. ollama
    5. mercury
