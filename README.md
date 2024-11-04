@@ -38,16 +38,18 @@ I created the demo on Fedora Linux and installing all of these was very simple. 
 ## Getting up and running
 1. Use pip to install
    1. jupyter or jupyter-ai
-   2. PyTorch (```pip install torch```)
-   3. FAISS - use ```pip install faiss-cpu``` or ```pip install faiss-gpu``` based on your hardware
-   4. weaviate-client
-   5. ollama
-   6. mercury
-   7. transformers
-   8. tqdm
-   9. openai
-   10. langchain
-   11. beautifulsoup4
+   2. pandas
+   3. PyTorch (```pip install torch```)
+   4. FAISS - use ```pip install faiss-cpu``` or ```pip install faiss-gpu``` based on your hardware
+   5. weaviate-client
+   6. sentence-transformers
+   7. ollama
+   8. mercury
+   9. transformers
+   10. tqdm
+   11. openai
+   12. langchain
+   13. beautifulsoup4
 3. Install Docker (on Linux, this is as complex as ```sudo dnf install docker``` [for other OSes](https://docs.docker.com/desktop/)
    1. Our setup requires you to use a minimally customized Weaviate Docker container. For that reason you need to be sure Docker Compose is installed.
    2. Installing this on Fedora with ```dnf``` was not working but [installing Compose as a plugin](https://docs.docker.com/compose/install/standalone/) did.
