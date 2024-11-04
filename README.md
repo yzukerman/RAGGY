@@ -38,7 +38,7 @@ I created the demo on Fedora Linux and installing all of these was very simple. 
 ## Getting up and running
 1. Use pip to install
    1. jupyter or jupyter-ai
-   2. Pytorch (```pip install torch```)
+   2. PyTorch (```pip install torch```)
    3. FAISS - use ```pip install faiss-cpu``` or ```pip install faiss-gpu``` based on your hardware
    4. weaviate-client
    5. ollama
