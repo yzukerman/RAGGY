@@ -32,6 +32,7 @@ This tutorial ran using Python 3.12.7.
   * Jupyter Lab (for running my Python examples)
 * An OpenAI API (not ChatGPT) account with a funding source. I spent $2 in total on this demo.
    * Set up an environment variable for your OpenAI API key under the name ```OPENAI_API_KEY```
+* I rely on ```wget``` to download documents. 
 
 I created the demo on Fedora Linux and installing all of these was very simple. What the world is coming to?
 
@@ -49,7 +50,9 @@ I created the demo on Fedora Linux and installing all of these was very simple. 
    10. tqdm
    11. openai
    12. langchain
-   13. beautifulsoup4
+   13. langchain-community
+   14. pypdf
+   15. beautifulsoup4
 3. Install Docker (on Linux, this is as complex as ```sudo dnf install docker``` [for other OSes](https://docs.docker.com/desktop/)
    1. Our setup requires you to use a minimally customized Weaviate Docker container. For that reason you need to be sure Docker Compose is installed.
    2. Installing this on Fedora with ```dnf``` was not working but [installing Compose as a plugin](https://docs.docker.com/compose/install/standalone/) did.
