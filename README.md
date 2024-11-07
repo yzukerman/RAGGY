@@ -33,6 +33,7 @@ This tutorial ran using Python 3.12.7 and tested on Fedora Linux Release 41 and 
   * Jupyter Lab (for running my Python examples)
 * An OpenAI API (not ChatGPT) account with a funding source. I spent $2 in total on this demo.
    * Set up an environment variable for your OpenAI API key under the name ```OPENAI_API_KEY```
+   * [If you need help setting up an environment variable, look here](https://chatgpt.com/share/672d3008-8dd4-800b-85f9-00f1752cbf9f)
 * I rely on ```wget``` to download documents. 
 
 I created the demo on Fedora Linux and installing all of these was very simple. What the world is coming to?
