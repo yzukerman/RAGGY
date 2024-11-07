@@ -3,7 +3,7 @@
 **Retrieval-Augmented Generation (RAG)** is now the mainstream Generative AI technique. It allows you to use your private content with a public LLM to answer questions about your documents. The idea is to send 'context', or a snippet of your overall document collection, to the LLM - helping it answer your query.
 This works in the following fashion:
 1. Prep
-   1. Identify a webpage with a list of links to PDF documents [I used this(https://www.analog.com/en/lp/001/blackfin-manuals.html)].
+   1. Identify a webpage with a list of links to PDF documents [I used this](https://www.analog.com/en/lp/001/blackfin-manuals.html).
    2. Break the documents apart into chunks. You need to do that to ensure you do not exceed the LLM's input capacity.
    3. Create vector embeddings - a numeric representation of the text - for each chunk. You create these vector using dedicated models known as 'embedding models'. These models convert text into number vectors.
    4. Load these vector embeddings into a vector database.
@@ -38,9 +38,9 @@ This tutorial ran using Python 3.12.7 and tested on Fedora Linux Release 41 and 
 I created the demo on Fedora Linux and installing all of these was very simple. What the world is coming to?
 
 ## Getting up and running
-1. Use pip to install [https://jupyter.org(Jupyter)] or [Jupyter-ai(https://jupyter-ai.readthedocs.io/en/latest/)]
-2. Install the Python dependencies using ```pip install -r requirements.txt```
-3. Install Docker (on Linux, this is as complex as ```sudo dnf install docker``` [for other OSes](https://docs.docker.com/desktop/)
+1. Use pip to install [Jupyter](https://jupyter.org) or [Jupyter-ai](https://jupyter-ai.readthedocs.io/en/latest/).
+2. Install the Python dependencies using ```pip install -r requirements.txt```.
+3. Install Docker (on Linux, this is as complex as ```sudo dnf install docker``` [for other OSes](https://docs.docker.com/desktop/).
    1. Our setup requires you to use a minimally customized Weaviate Docker container. For that reason you need to be sure Docker Compose is installed.
    2. Installing this on Fedora with ```dnf``` was not working but [installing Compose as a plugin](https://docs.docker.com/compose/install/standalone/) did.
 4. With Docker ready, you will need to use the ```docker-compose.yml``` file I have in the project, which enables the use of OpenAI seamlessly with Weaviate.
