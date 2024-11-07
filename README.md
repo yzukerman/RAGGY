@@ -3,7 +3,7 @@
 **Retrieval-Augmented Generation (RAG)** is now the mainstream Generative AI technique. It allows you to use your private content with a public LLM to answer questions about your documents. The idea is to send 'context', or a snippet of your overall document collection, to the LLM - helping it answer your query.
 This works in the following fashion:
 1. Prep
-   1. Collect the documents you want to search through for answers.
+   1. Identify a webpage with a list of links to PDF documents [I used this(https://www.analog.com/en/lp/001/blackfin-manuals.html)].
    2. Break the documents apart into chunks. You need to do that to ensure you do not exceed the LLM's input capacity.
    3. Create vector embeddings - a numeric representation of the text - for each chunk. You create these vector using dedicated models known as 'embedding models'. These models convert text into number vectors.
    4. Load these vector embeddings into a vector database.
@@ -15,19 +15,20 @@ This works in the following fashion:
 
 ## Sources
 This tutorial is based on a conglomeration of content from the following sources
-* ChatGPT (Chapters 1 and 2)
-* [Weaviate's documentation](https://weaviate.io/developers/academy/py/starter_text_data/text_rag)
-* Pixegami's [YouTube tutorial](https://www.youtube.com/watch?v=2TJxpyO3ei4&t=202s)
-* [Ollama's blog post about local embedding](https://ollama.com/blog/embedding-models)
+* ChatGPT helped me write chapters 1 and 2.
+* [Weaviate's documentation](https://weaviate.io/developers/academy/py/starter_text_data/text_rag).
+* Pixegami's [YouTube tutorial](https://www.youtube.com/watch?v=2TJxpyO3ei4&t=202s).
+* [Ollama's blog post about local embedding](https://ollama.com/blog/embedding-models).
 
 ## Making that happen: what do you need?
-This tutorial ran using Python 3.12.7.
+This tutorial ran using Python 3.12.7 and tested on Fedora Linux Release 41 and MacOS Sonoma 14.7. 
 
 * A collection of documents - PDFs are good
 * Install
   * FAISS - an in-memory vector database from Meta 
   * Docker
   * Weaviate (depends on Docker)
+  * PyTorch
   * Ollama (for running a local embedding model)
   * Jupyter Lab (for running my Python examples)
 * An OpenAI API (not ChatGPT) account with a funding source. I spent $2 in total on this demo.
@@ -37,28 +38,14 @@ This tutorial ran using Python 3.12.7.
 I created the demo on Fedora Linux and installing all of these was very simple. What the world is coming to?
 
 ## Getting up and running
-1. Use pip to install
-   1. jupyter or jupyter-ai
-   2. pandas
-   3. PyTorch (```pip install torch```)
-   4. FAISS - use ```pip install faiss-cpu``` or ```pip install faiss-gpu``` based on your hardware
-   5. weaviate-client
-   6. sentence-transformers
-   7. ollama
-   8. mercury
-   9. transformers
-   10. tqdm
-   11. openai
-   12. langchain
-   13. langchain-community
-   14. pypdf
-   15. beautifulsoup4
+1. Use pip to install [https://jupyter.org(Jupyter)] or [Jupyter-ai(https://jupyter-ai.readthedocs.io/en/latest/)]
+2. Install the Python dependencies using ```pip install -r requirements.txt```
 3. Install Docker (on Linux, this is as complex as ```sudo dnf install docker``` [for other OSes](https://docs.docker.com/desktop/)
    1. Our setup requires you to use a minimally customized Weaviate Docker container. For that reason you need to be sure Docker Compose is installed.
    2. Installing this on Fedora with ```dnf``` was not working but [installing Compose as a plugin](https://docs.docker.com/compose/install/standalone/) did.
 4. With Docker ready, you will need to use the ```docker-compose.yml``` file I have in the project, which enables the use of OpenAI seamlessly with Weaviate.
    1. This can save you time and get you up and running muuuuuuch faster.
-   2. You can use another LLM provider but your milage will vary.
+   2. You can use another LLM provider but your mileage will vary.
 5. From the command line, run ```jupyter lab```.
 6. For the sections that discuss local execution (chapters 4 and 5):
    1. [Install Ollama](https://ollama.com/download).
