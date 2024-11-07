@@ -6,10 +6,10 @@ This works in the following fashion:
    1. Identify a webpage with a list of links to PDF documents [I used this](https://www.analog.com/en/lp/001/blackfin-manuals.html).
    2. Break the documents apart into chunks. You need to do that to ensure you do not exceed the LLM's input capacity.
    3. Create vector embeddings - a numeric representation of the text - for each chunk. You create these vector using dedicated models known as 'embedding models'. These models convert text into number vectors.
-   4. Load these vector embeddings into a vector database.
+   4. Load these vector embeddings into a vector database. In our case we also loaded each vector's corresponding text chunk.
 2. Search the vector database for the information you want. (Vector databases are used because they are really great for searching)
-3. The vector database will either return you the text chunks that are relevant to your question or point at the documents you will want to use. 
-   1. This will be the text/documents you send to the LLM with your question to help it compose an answer for you.
+3. The vector database will either return you the text chunks that are relevant to your question (or point at the documents you will want to use). 
+   1. These will be the text chunks/documents that you will send to the LLM with your question to help it compose an answer for you.
 4. Send a prompt containing the question and the context (search results) to the LLM.
 5. The LLM will return an answer that is relevant to your question.
 
